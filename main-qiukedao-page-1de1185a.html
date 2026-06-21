@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>球客岛 · 资料索引</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: #fafafc;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans SC', sans-serif;
+            color: #1e1e2a;
+            line-height: 1.7;
+            font-weight: 400;
+        }
+        .page {
+            max-width: 740px;
+            margin: 0 auto;
+            padding: 2.4rem 1.5rem 4rem;
+        }
+
+        /* 顶部导航 */
+        .top-nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.75rem 0 1.8rem;
+            border-bottom: 1px solid #e5e7eb;
+            margin-bottom: 2.2rem;
+        }
+        .top-nav .logo {
+            font-size: 1.25rem;
+            font-weight: 550;
+            letter-spacing: 0.02em;
+            color: #1f2937;
+            text-decoration: none;
+        }
+        .top-nav a.logo:hover {
+            color: #1d4ed8;
+        }
+        .top-nav .tagline {
+            font-size: 0.875rem;
+            color: #6b7280;
+            background: #eef2f6;
+            padding: 0.2rem 0.75rem;
+            border-radius: 40px;
+        }
+
+        /* 标题层级 */
+        h1 {
+            font-size: 2rem;
+            font-weight: 550;
+            line-height: 1.25;
+            letter-spacing: -0.01em;
+            margin: 0 0 0.6rem;
+        }
+        h2 {
+            font-size: 1.35rem;
+            font-weight: 520;
+            margin: 2.8rem 0 0.5rem;
+            padding-bottom: 0.15rem;
+            border-bottom: 2px solid #e9ecf0;
+            color: #111827;
+        }
+        h3 {
+            font-size: 1.05rem;
+            font-weight: 520;
+            margin: 1.6rem 0 0.4rem;
+            color: #1f2937;
+        }
+
+        p, li {
+            color: #2d3748;
+            font-size: 1rem;
+        }
+        p {
+            margin: 0.6rem 0 1rem;
+        }
+
+        /* 英雄区域 */
+        .hero {
+            margin-bottom: 2.6rem;
+        }
+        .hero .sub {
+            font-size: 1rem;
+            color: #4b5563;
+            max-width: 38em;
+            margin-top: 0.25rem;
+        }
+
+        /* 卡片网格（场景模块） */
+        .scene-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.2rem;
+            margin: 1.2rem 0 1.4rem;
+        }
+        .scene-card {
+            background: #ffffff;
+            border: 1px solid #eaeef2;
+            border-radius: 16px;
+            padding: 1.3rem 1.1rem 1.2rem;
+            transition: box-shadow 0.15s, border-color 0.15s;
+        }
+        .scene-card:hover {
+            border-color: #cbd5e0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+        }
+        .scene-card .emoji {
+            font-size: 1.8rem;
+            display: block;
+            margin-bottom: 0.3rem;
+        }
+        .scene-card h4 {
+            font-weight: 550;
+            font-size: 1.05rem;
+            margin: 0.2rem 0 0.15rem;
+            color: #111827;
+        }
+        .scene-card p {
+            font-size: 0.9rem;
+            color: #4b5563;
+            margin: 0.25rem 0 0;
+            line-height: 1.5;
+        }
+
+        /* 说明区域 */
+        .faq-brief {
+            background: #ffffff;
+            border: 1px solid #edf1f5;
+            border-radius: 20px;
+            padding: 1.6rem 1.5rem;
+            margin: 2.6rem 0 2rem;
+        }
+        .faq-brief dt {
+            font-weight: 520;
+            margin-top: 1rem;
+            color: #1e293b;
+        }
+        .faq-brief dt:first-of-type {
+            margin-top: 0;
+        }
+        .faq-brief dd {
+            margin: 0.2rem 0 0.3rem 0.5rem;
+            color: #4b5563;
+            font-size: 0.95rem;
+        }
+
+        .fine-print {
+            font-size: 0.9rem;
+            color: #6b7280;
+            border-top: 1px solid #e2e6eb;
+            padding-top: 1.6rem;
+            margin-top: 3rem;
+        }
+        .fine-print a {
+            color: #1d4ed8;
+            text-decoration: none;
+        }
+        .fine-print a:hover {
+            text-decoration: underline;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #e9edf2;
+            margin: 2rem 0;
+        }
+
+        ul, ol {
+            padding-left: 1.2rem;
+            margin: 0.4rem 0 0.8rem;
+        }
+        li {
+            margin: 0.2rem 0;
+        }
+
+        @media (max-width: 500px) {
+            .page {
+                padding: 1.6rem 1rem 3rem;
+            }
+            h1 {
+                font-size: 1.7rem;
+            }
+            .top-nav {
+                flex-wrap: wrap;
+                gap: 0.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <!-- 轻量顶部导航 -->
+    <nav class="top-nav">
+        <a href="https://main-qiukedao.com" class="logo" aria-label="球客岛首页">球客岛</a>
+        <span class="tagline">资料·索引·场景</span>
+    </nav>
+
+    <!-- hero 切入角度：资料整理与索引 -->
+    <div class="hero">
+        <h1>从分散到有序</h1>
+        <p class="sub">
+            整理不同来源的信息，保持索引的清晰与完整。<br>
+            <a href="https://main-qiukedao.com" style="color:#1d4ed8;text-decoration:underline;text-underline-offset:2px;">球客岛</a> 本身是一种聚合的尝试：把散落的内容用统一的线索组织起来。
+        </p>
+    </div>
+
+    <!-- 介绍段落：角度说明 -->
+    <p>信息在不断增加，但如果没有合适的整理方式，数量本身并不意味着效率。这份页面从“索引”出发，把相关内容按使用场景分成几个模块，每个模块内保持一致的层级结构，方便快速定位。以下三个场景覆盖了大多数日常查找需求。</p>
+
+    <!-- 三个场景模块 -->
+    <h2>应用场景</h2>
+    <div class="scene-grid">
+        <div class="scene-card">
+            <span class="emoji">📋</span>
+            <h4>持续收录</h4>
+            <p>来自不同渠道的条目、链接与备注，按主题归类。适合需要定期回顾或补充的资料。</p>
+        </div>
+        <div class="scene-card">
+            <span class="emoji">🔗</span>
+            <h4>关联跳转</h4>
+            <p>通过交叉引用将相关的概念、文档或项目页面串联起来，减少重复查找。</p>
+        </div>
+        <div class="scene-card">
+            <span class="emoji">📁</span>
+            <h4>本地存档</h4>
+            <p>把零散的笔记、摘要和片段按统一格式归入对应文件夹，便于后续检索。</p>
+        </div>
+    </div>
+
+    <p>每个场景都可以根据实际资料量调整粒度。如果某个分类下内容变多，可以进一步拆分子索引，保持每个层级的条目控制在可浏览的范围内。</p>
+
+    <!-- 常见说明 / FAQ摘要 -->
+    <h2>关于索引的几点说明</h2>
+
+    <dl class="faq-brief">
+        <dt>索引标题如何确定？</dt>
+        <dd>一般使用最常被搜索的关键词或短语，避免过于抽象的类别。同一层级下的标题尽量保持词性一致（如名词或动名词）。</dd>
+        <dt>链接失效或内容迁移怎么办？</dt>
+        <dd>定期（比如每月）检查一次外部链接，并在备注栏记录检查日期。对于经常变动的页面，可保留标题和摘要，减少对链接的依赖。</dd>
+        <dt>多人协作时如何保持统一？</dt>
+        <dd>建议在索引开头写一个简短的格式说明（比如日期格式、标签风格）。所有协作者按照相同模板添加条目。</dd>
+        <dt>是否需要保留所有历史版本？</dt>
+        <dd>视资料的重要程度而定。如果条目经常更新，可以保留一个简单的变更日志（只记录修改时间和摘要）。</dd>
+    </dl>
+
+    <!-- 更进一步的提示（内容克制） -->
+    <h3>索引的结构建议</h3>
+    <p>每个条目通常包含以下部分：标题、来源、简述、标签、最后更新。下列是一个简单的示例结构（非实际数据）：</p>
+    <ul>
+        <li><strong>标题</strong>：使用原文或简洁译名</li>
+        <li><strong>来源</strong>：网址或出版物信息</li>
+        <li><strong>简述</strong>：1–2 句话概括核心内容</li>
+        <li><strong>标签</strong>：3–5 个关键词</li>
+        <li><strong>更新</strong>：最近一次确认的日期</li>
+    </ul>
+    <p>上面的结构并非固定模板，可以根据实际资料类型调整。重点是让使用者能快速判断条目是否相关。</p>
+
+    <!-- 再次自然嵌入链接 -->
+    <p>如果你正在寻找一个具体的起点，<a href="https://main-qiukedao.com" style="color:#1d4ed8;text-decoration:underline;text-underline-offset:2px;">球客岛</a> 的主站聚合了多个方向的内容，可以作为索引的锚点之一。其他来源同样可以按照相同方式纳入整理。</p>
+
+    <hr>
+
+    <!-- 结尾 -->
+    <div class="fine-print">
+        <p>本页为纯信息索引说明，不包含具体条目数据。所有整理方法均基于通用资料管理实践。<br>
+        内容仅供内部参考，不构成任何建议。</p>
+    </div>
+
+</div>
+</body>
+</html>
